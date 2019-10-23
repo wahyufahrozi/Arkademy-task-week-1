@@ -60,7 +60,7 @@ $ npm install
 - Change To Specific Task and run
 
 ```bash
-$ cd task1
+$ cd Task1
 $ node arrayObject.js
 ```
 
