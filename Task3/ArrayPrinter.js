@@ -3,10 +3,10 @@ function printer(masukan) {
     let perintah = [true, false];
 
     // perulangan untuk perintah masukan
-    for (let p = 0; p < print.length; p++) {
-        if (perintah[p] == masukan)
-            return print[p]
+    for (let i = 0; i < print.length; i++) {
+        if (perintah[i] === masukan)
+            return print[i]
     }
 }
 
-console.log(printer(true))
+console.log(printer(false))

@@ -8,11 +8,11 @@ const sorting = (bilangan) => {
         return a - b
     });
 
-    console.log(bilangan);
+    console.log(`sort Secara Asecending :`, bilangan);
     bilangan.sort(function (a, b) {
         return b - a
     });
-    console.log(bilangan);
+    console.log(`sort Secara Descending :`, bilangan);
 
 
 }

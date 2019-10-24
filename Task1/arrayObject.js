@@ -28,8 +28,8 @@ const pushTemen = (temen) => {
         umur: 25
     }
     temen.push(temenbaru);
-    console.log(temen);
 
+    console.log(temen);
 }
 // end
 
@@ -50,6 +50,13 @@ const gantitemen = (temen) => {
 }
 // end
 
+// cara menghapus temen berdasarkan Array
+// temen.splice(0, 0);
+// console.log(temen);
+//end
+console.log("Menambahkan Temen :");
 pushTemen(temen);
+console.log("Delete Temen :");
 deleteTemen(temen);
+console.log("Change Value:");
 gantitemen(temen);

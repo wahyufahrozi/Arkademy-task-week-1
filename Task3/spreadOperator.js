@@ -14,15 +14,20 @@ let employee = [{
     }
 
 ]
+console.log("Before:");
+console.table(employee);
 let newPerson = [{
     ...employee[0],
     status: "menikah",
     city: "jakarta"
 }, {
     ...employee[1],
+    company: "arkademy",
     city: "jogja"
 }]
-console.log(newPerson);
+
+console.log("After:");
+console.table(newPerson);
 
 
 
