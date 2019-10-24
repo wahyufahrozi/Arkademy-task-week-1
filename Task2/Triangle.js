@@ -26,4 +26,4 @@ function triangle(num) {
     }
 
 }
-triangle(3);
+triangle(4);

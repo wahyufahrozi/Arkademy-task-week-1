@@ -5,8 +5,9 @@ function palindrom(word, find) {
         while (string.length >= find.length) {
             if (find === string.substring(0, find.length)) {
                 hitung++;
+                //jika yang dihitung sama hitungny di tambah 1
             }
-            string = string.substring(1);
+            string = string.substring(1); //dilaklukan pemotogan satu huruf tiap perulangan
         }
     }
     selection(word);
@@ -14,4 +15,4 @@ function palindrom(word, find) {
     return hitung + 'kali';
 }
 
-console.log(palindrom("banananana", "banana"));
+console.log(palindrom("banananana", "nana"));

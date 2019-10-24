@@ -1,12 +1,12 @@
-let angka = [2, 10, 4, 18, 10, 13, 52, 9, 20, 1, 6, 2, 4];
+let angka = [2, 10, 4, 18, 10, 13, 2, 2];
 
 const mean = (angka) => {
 
     let temp = 0;
-    for (let i = 0; i < angka.length; i++) {
+    for (let i = 0; i < angka.length; i++) { //melakukan perulangan selama angka length belum tercapai
         temp = temp + angka[i]
     }
-    return temp / angka.length;
+    return Math.floor(temp / angka.length);
 
 }
 
@@ -19,31 +19,33 @@ const median = (angka) => {
     });
     // console.log(angka);
 
-    let half = Math.floor(angka.length / 2);
+    let half = Math.round(angka.length / 2);
     return angka[half]
 }
 
-console.log(`nilai tengah nya adalah:`, median(angka));
+console.log(`nilai median nya adalah:`, median(angka));
 
 
 const modus = (angka) => {
     if (angka.length == 0)
         return null;
-    var modeMap = {};
-    var Elementmax = angka[0],
+    var modeMap = {}; //menyimpan array dalam bentuk objek
+    var Elementmax = angka[0], //angka indeks pertama untuk sementara
         maxCount = 1;
     for (var i = 0; i < angka.length; i++) {
-        var el = angka[i];
-        if (modeMap[el] == null)
-            modeMap[el] = 1;
+        var el = angka[i]; //untuk mengambil nilai dari array
+        if (modeMap[el] == null) //untuk membandingkan angka yang keluar
+            modeMap[el] = 1; //menghitung angka berapa kali keluar
         else
-            modeMap[el]++;
+            modeMap[el]++; //jika angka yang sama valuenya nambah 1
         if (modeMap[el] > maxCount) {
             Elementmax = el;
-            maxCount = modeMap[el];
+            maxCount = modeMap[el]; //jika angka yang sama lebih dari maxcount maka element max sama dengan element max
         }
     }
+    console.log(modeMap);
     return Elementmax;
+
 }
 
-console.log("Nilai Yang paling banyak keluar adalah :", modus(angka));
+console.log("Nilai Modus adalah :", modus(angka));
