@@ -1,0 +1,18 @@
+function ispalindrome(text) {
+// Split text into array of characters
+let charArray = text.toLowerCase().split('');
+
+
+// Loop through every character and compare with the
+// character in its corresponding position if the string
+// was reversed. Then store the result
+let result = charArray.every((letter, index) => {
+return letter === charArray[charArray.length - index - 1];
+});
+
+
+// Return the result of the evaluation
+return result
+}
+
+console.log (ispalindrome("madam"))
