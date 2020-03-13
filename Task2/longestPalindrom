@@ -1,0 +1,25 @@
+const str = "abcd123madam321xyx1vv";
+
+function isPalindrom(str) {
+  let reverse = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    reverse = reverse + str[i];
+  }
+  return (reverse === str);
+}
+function longestPalindromSubString(str){
+  let max_length = 0
+  maxp='';
+  for(let i=0;i<str.length;i++){
+    let sub = str.substring(i,str.length);
+    for(let b =sub.length; b>=0;b--){
+      let sub_str =sub.substring(0,b);
+      if(sub_str.length>=1 &&isPalindrom(sub_str)&& sub_str.length>max_length){
+        max_length = sub_str.length
+        maxp=sub_str
+      }
+    }
+  }
+  return maxp
+}
+console.log(longestPalindromSubString(str))
